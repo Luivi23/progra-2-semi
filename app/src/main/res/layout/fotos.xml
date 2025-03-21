@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/fondo">
+    android:background="@color/material_dynamic_tertiary20">
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -12,19 +12,20 @@
 
         <ImageView
             android:id="@+id/imgFotoAdaptador"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@android:drawable/ic_menu_gallery" />
     </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/lblCod"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="80dp"
-        android:text="Cod:"
-        android:textColor="@color/textoEncabezado"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="Cod:"
+        android:textColor="@color/textoEncabezado" />
 
     <TextView
         android:id="@+id/lblCodigoAdaptador"

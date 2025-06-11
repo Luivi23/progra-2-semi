@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/edtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título de la tarea"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:layout_below="@id/edtTitulo"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/labelGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar grupo"
+        android:textStyle="bold"
+        android:layout_below="@id/edtDescripcion"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"/>
+
+    <Spinner
+        android:id="@+id/spinnerGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelGrupo"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edtFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de creación"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:layout_below="@id/spinnerGrupo"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <!-- 🔔 NUEVOS CAMPOS AGREGADOS 🔔 -->
+
+    <EditText
+        android:id="@+id/edtFechaRecordatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de recordatorio"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:layout_below="@id/edtFecha"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edtHoraRecordatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora de recordatorio"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:layout_below="@id/edtFechaRecordatorio"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <CheckBox
+        android:id="@+id/chkRepetirDiario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Repetir diariamente?"
+        android:layout_below="@id/edtHoraRecordatorio"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <!-- ✅ FIN DE NUEVOS CAMPOS -->
+
+    <CheckBox
+        android:id="@+id/chkRealizada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Ya está realizada?"
+        android:layout_below="@id/chkRepetirDiario"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_below="@id/chkRealizada"
+        android:layout_marginTop="16dp"
+        android:shadowColor="@color/aqua_claro"
+        />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_below="@id/btnGuardar"
+        android:layout_marginTop="8dp"
+        android:shadowColor="@color/aqua_oscuro"
+        />
+
+</RelativeLayout>

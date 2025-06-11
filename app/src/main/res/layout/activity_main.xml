@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Toolbar personalizado -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Botón Grupos -->
+    <Button
+        android:id="@+id/btnGrupos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grupos"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:shadowColor="@color/aqua_claro" />
+
+    <!-- Botón Agregar Tarea -->
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Tarea"
+        android:layout_alignTop="@id/btnGrupos"
+        android:layout_alignParentEnd="true"
+        android:shadowColor="@color/aqua_oscuro" />
+
+    <!-- Spinner de filtro de tareas -->
+    <Spinner
+        android:id="@+id/spinnerFiltro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGrupos"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- RecyclerView para mostrar las tareas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTareas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spinnerFiltro"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnGrafica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerTareas"
+        android:layout_marginTop="-98dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ver Gráfico" />
+
+
+</RelativeLayout>
+
+
+
